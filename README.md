@@ -31,3 +31,8 @@ When the keyboard is up, you can scroll on the page. It allow a responsive and e
 When you click on a button, the screen change, with the animation
 
 ![otherScreen](demo/otherScreen.gif)
+
+# Bonus
+
+I spent 4 hours to do this job
+The code is clean and the file [`lib/tools/constants.dart`](lib/tools/constants.dart) can be used as a configuration file (colors / paddings / sizes / letterSpacing ...)
