@@ -65,4 +65,9 @@ class Paddings {
   static final double loginPaddingValue = 32;
   static final EdgeInsets loginPadding =
       EdgeInsets.only(right: loginPaddingValue, left: loginPaddingValue);
+  static final EdgeInsets titlePadding =
+      EdgeInsets.only(top: loginPaddingValue, bottom: loginPaddingValue);
+  static final EdgeInsets buttonPadding = EdgeInsets.all(
+    loginPaddingValue,
+  );
 }

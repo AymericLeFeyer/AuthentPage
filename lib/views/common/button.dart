@@ -21,7 +21,7 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: cst.Paddings.loginPadding,
+      padding: cst.Paddings.buttonPadding,
       child: ButtonTheme(
         minWidth: cst.Size.width,
         height: 50,

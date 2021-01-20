@@ -9,13 +9,16 @@ class MyTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title.toUpperCase(),
-      style: TextStyle(
-          color: cst.Colors.titleColor,
-          fontSize: cst.Font.titleFontSize,
-          fontWeight: FontWeight.bold,
-          letterSpacing: cst.Font.letterSpacing),
+    return Padding(
+      padding: cst.Paddings.titlePadding,
+      child: Text(
+        title.toUpperCase(),
+        style: TextStyle(
+            color: cst.Colors.titleColor,
+            fontSize: cst.Font.titleFontSize,
+            fontWeight: FontWeight.bold,
+            letterSpacing: cst.Font.letterSpacing),
+      ),
     );
   }
 }
