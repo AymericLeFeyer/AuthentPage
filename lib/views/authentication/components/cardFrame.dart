@@ -1,6 +1,6 @@
 import 'package:authentPage/tools/constants.dart' as cst;
-import 'package:authentPage/views/authentification/components/backContent.dart';
-import 'package:authentPage/views/authentification/components/loginContent.dart';
+import 'package:authentPage/views/authentication/components/backContent.dart';
+import 'package:authentPage/views/authentication/components/loginContent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

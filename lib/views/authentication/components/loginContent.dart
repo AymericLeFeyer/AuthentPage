@@ -16,7 +16,7 @@ class LoginContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         MyTitle(
-          title: "Authentification",
+          title: "Authentication",
         ),
         Field(
           placeholder: "Email",
@@ -29,20 +29,25 @@ class LoginContent extends StatelessWidget {
           text: "CONNECT",
           backgroundColor: cst.Colors.buttonConnectColor,
           textColor: cst.Colors.buttonTextColor,
+          splashColor: cst.Colors.buttonConnectSplashColor,
         ),
         FlatButton(
           color: Colors.transparent,
           onPressed: fct,
           child: Text(
             'Forgotten password',
-            style: TextStyle(color: cst.Colors.buttonConnectColor),
+            style: TextStyle(
+                color: cst.Colors.buttonConnectColor,
+                letterSpacing: cst.Font.letterSpacing),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 50),
           child: Text(
             "- OR -",
-            style: TextStyle(fontSize: cst.Font.bodyFontSize),
+            style: TextStyle(
+                fontSize: cst.Font.bodyFontSize,
+                letterSpacing: cst.Font.letterSpacing),
           ),
         ),
         MyButton(
@@ -50,6 +55,7 @@ class LoginContent extends StatelessWidget {
           text: "REGISTER",
           backgroundColor: cst.Colors.buttonRegisterColor,
           textColor: cst.Colors.buttonTextColor,
+          splashColor: cst.Colors.buttonRegisterSplashColor,
         )
       ],
     );

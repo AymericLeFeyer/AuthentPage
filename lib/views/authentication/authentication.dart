@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:authentPage/tools/constants.dart';
-import 'package:authentPage/views/authentification/components/cardFrame.dart';
-import 'package:authentPage/views/authentification/components/imageSlider.dart';
+import 'package:authentPage/views/authentication/components/cardFrame.dart';
+import 'package:authentPage/views/authentication/components/imageSlider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

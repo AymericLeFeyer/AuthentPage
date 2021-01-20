@@ -1,6 +1,19 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+
+class Theme {
+  static final theme = ThemeData(
+    // Define the default brightness and colors.
+    brightness: Brightness.light,
+    primaryColor: Colors.blue,
+    accentColor: Colors.red,
+
+    // Define the default font family.
+    fontFamily: 'Comfortaa',
+  );
+}
 
 class Time {
   static final int cardTransition = 200;
@@ -14,8 +27,13 @@ class Colors {
 
   static final Color backgroundColor = white;
   static final Color buttonTextColor = white;
+
   static final Color buttonConnectColor = blue;
+  static final Color buttonConnectSplashColor = red;
+
   static final Color buttonRegisterColor = red;
+  static final Color buttonRegisterSplashColor = blue;
+
   static final Color titleColor = red;
 }
 
@@ -26,9 +44,9 @@ class AppRadius {
 
 class Images {
   static final List<String> background = [
-    'assets/background/blue.jpeg',
-    'assets/background/green.jpg',
-    'assets/background/pink.jpg',
+    'assets/background/canyon.jpg',
+    'assets/background/city.jpg',
+    'assets/background/mountain.jpg',
   ];
 }
 
@@ -40,6 +58,7 @@ class Size {
 class Font {
   static final double bodyFontSize = 20;
   static final double titleFontSize = 30;
+  static final double letterSpacing = 0.3;
 }
 
 class Paddings {

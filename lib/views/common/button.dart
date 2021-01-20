@@ -8,13 +8,15 @@ class MyButton extends StatelessWidget {
   String text;
   Color backgroundColor;
   Color textColor;
+  Color splashColor;
 
   MyButton(
       {Key key,
       this.onPressed,
       this.text,
       this.backgroundColor,
-      this.textColor});
+      this.textColor,
+      this.splashColor});
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +28,15 @@ class MyButton extends StatelessWidget {
         child: RaisedButton(
           onPressed: onPressed,
           color: backgroundColor,
+          splashColor: splashColor,
           shape:
               RoundedRectangleBorder(borderRadius: cst.AppRadius.buttonRadius),
           child: Text(
             text,
-            style: TextStyle(color: textColor, fontSize: cst.Font.bodyFontSize),
+            style: TextStyle(
+                color: textColor,
+                fontSize: cst.Font.bodyFontSize,
+                letterSpacing: cst.Font.letterSpacing),
           ),
         ),
       ),

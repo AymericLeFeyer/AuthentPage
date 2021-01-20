@@ -1,4 +1,5 @@
-import 'package:authentPage/views/authentification/authentification.dart';
+import 'package:authentPage/tools/constants.dart' as cst;
+import 'package:authentPage/views/authentication/authentication.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -24,9 +25,7 @@ class MyApp extends GetMaterialApp {
       child: GetMaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
+        theme: cst.Theme.theme,
         home: AuthentPage(),
       ),
     );

@@ -13,7 +13,10 @@ class Field extends StatelessWidget {
     return Padding(
       padding: cst.Paddings.loginPadding,
       child: TextField(
-        decoration: InputDecoration(hintText: placeholder),
+        style: TextStyle(letterSpacing: cst.Font.letterSpacing),
+        decoration: InputDecoration(
+            hintText: placeholder,
+            hintStyle: TextStyle(letterSpacing: cst.Font.letterSpacing)),
       ),
     );
   }

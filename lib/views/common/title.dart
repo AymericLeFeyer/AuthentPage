@@ -14,7 +14,8 @@ class MyTitle extends StatelessWidget {
       style: TextStyle(
           color: cst.Colors.titleColor,
           fontSize: cst.Font.titleFontSize,
-          fontWeight: FontWeight.bold),
+          fontWeight: FontWeight.bold,
+          letterSpacing: cst.Font.letterSpacing),
     );
   }
 }
