@@ -8,11 +8,20 @@ class Time {
 }
 
 class Colors {
-  static final Color backgroundColor = Color.fromRGBO(255, 255, 255, 1);
+  static final Color white = Color.fromRGBO(255, 255, 255, 1);
+  static final Color blue = Color.fromRGBO(0, 167, 221, 1);
+  static final Color red = Color.fromRGBO(233, 49, 80, 1);
+
+  static final Color backgroundColor = white;
+  static final Color buttonTextColor = white;
+  static final Color buttonConnectColor = blue;
+  static final Color buttonRegisterColor = red;
+  static final Color titleColor = red;
 }
 
 class AppRadius {
   static final Radius backgroundRadius = Radius.circular(50);
+  static final BorderRadiusGeometry buttonRadius = BorderRadius.circular(30);
 }
 
 class Images {
@@ -26,4 +35,15 @@ class Images {
 class Size {
   static final double width = Get.width;
   static final double height = Get.height;
+}
+
+class Font {
+  static final double bodyFontSize = 20;
+  static final double titleFontSize = 30;
+}
+
+class Paddings {
+  static final double loginPaddingValue = 32;
+  static final EdgeInsets loginPadding =
+      EdgeInsets.only(right: loginPaddingValue, left: loginPaddingValue);
 }

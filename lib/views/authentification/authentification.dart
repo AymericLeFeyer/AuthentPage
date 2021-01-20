@@ -30,12 +30,12 @@ class _AuthentPageState extends State<AuthentPage> {
     _timer.cancel();
   }
 
-  void changeScreen(int state) {
+  void changeScreen() {
     setState(() {
       show = false;
       _timer = new Timer(Duration(milliseconds: Time.cardTransition), () {
         setState(() {
-          this.state = state;
+          this.state = (this.state + 1) % 2;
           show = true;
         });
       });
@@ -45,18 +45,13 @@ class _AuthentPageState extends State<AuthentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            setState(() {
-              changeScreen((this.state + 1) % 2);
-            });
-          },
-        ),
-        body: Stack(
-          children: [
-            ImageSlider(),
-            CardFrame(show: show, state: state),
-          ],
-        ));
+        body: SingleChildScrollView(
+      child: Stack(
+        children: [
+          ImageSlider(),
+          CardFrame(show: show, state: state, changeScreen: changeScreen),
+        ],
+      ),
+    ));
   }
 }

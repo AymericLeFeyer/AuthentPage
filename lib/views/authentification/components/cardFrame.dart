@@ -8,8 +8,9 @@ class CardFrame extends StatelessWidget {
   // Params
   bool show;
   int state;
+  Function changeScreen;
 
-  CardFrame({Key key, this.show, this.state});
+  CardFrame({Key key, this.show, this.state, this.changeScreen});
 
   // Variables
   final height = cst.Size.height * 2 / 3;
@@ -31,7 +32,9 @@ class CardFrame extends StatelessWidget {
                 topLeft: cst.AppRadius.backgroundRadius,
                 topRight: cst.AppRadius.backgroundRadius)),
         child: Container(
-          child: this.state == 0 ? LoginContent() : BackContent(),
+          child: this.state == 0
+              ? LoginContent(fct: changeScreen)
+              : BackContent(fct: changeScreen),
         ),
       ),
     );
