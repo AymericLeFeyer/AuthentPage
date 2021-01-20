@@ -1,10 +1,10 @@
 import 'dart:async';
 
+import 'package:authentPage/tools/constants.dart';
 import 'package:authentPage/views/authentification/components/cardFrame.dart';
 import 'package:authentPage/views/authentification/components/imageSlider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
 class AuthentPage extends StatefulWidget {
   @override
@@ -14,11 +14,11 @@ class AuthentPage extends StatefulWidget {
 class _AuthentPageState extends State<AuthentPage> {
   Timer _timer;
   bool show = false;
-  String state;
+  int state;
 
   @override
   void initState() {
-    state = "authent";
+    state = 0;
     _timer = new Timer(Duration(milliseconds: 1500), handleTimeout);
     super.initState();
   }
@@ -30,10 +30,10 @@ class _AuthentPageState extends State<AuthentPage> {
     _timer.cancel();
   }
 
-  void changeScreen(String state) {
+  void changeScreen(int state) {
     setState(() {
       show = false;
-      _timer = new Timer(Duration(milliseconds: 200), () {
+      _timer = new Timer(Duration(milliseconds: Time.cardTransition), () {
         setState(() {
           this.state = state;
           show = true;
@@ -48,7 +48,7 @@ class _AuthentPageState extends State<AuthentPage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
-              changeScreen(this.state == "authent" ? "Coucou" : "authent");
+              changeScreen((this.state + 1) % 2);
             });
           },
         ),

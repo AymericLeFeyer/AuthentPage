@@ -74,6 +74,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.24.0"
+  image_fade:
+    dependency: "direct main"
+    description:
+      name: image_fade
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.1"
   matcher:
     dependency: transitive
     description:
@@ -158,3 +165,4 @@ packages:
     version: "2.1.0-nullsafety.3"
 sdks:
   dart: ">=2.10.0 <2.11.0"
+  flutter: ">=1.6.7 <2.0.0"

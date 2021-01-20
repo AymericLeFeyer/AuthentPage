@@ -1,36 +1,37 @@
+import 'package:authentPage/tools/constants.dart' as cst;
+import 'package:authentPage/views/authentification/components/backContent.dart';
+import 'package:authentPage/views/authentification/components/loginContent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
 class CardFrame extends StatelessWidget {
   // Params
   bool show;
-  String state;
+  int state;
 
   CardFrame({Key key, this.show, this.state});
 
   // Variables
-  final height = Get.height * 2 / 3;
+  final height = cst.Size.height * 2 / 3;
 
   @override
   Widget build(BuildContext context) {
     return AnimatedPositioned(
-      duration: Duration(milliseconds: 200),
+      duration: Duration(milliseconds: cst.Time.cardTransition),
       bottom: show ? 0 : -height,
       child: Container(
-        width: Get.width,
+        width: cst.Size.width,
         height: height,
         decoration: BoxDecoration(
             border: Border.all(
-              color: Color.fromRGBO(255, 255, 255, 1),
+              color: cst.Colors.backgroundColor,
             ),
-            color: Color.fromRGBO(255, 255, 255, 1),
+            color: cst.Colors.backgroundColor,
             borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(50), topRight: Radius.circular(50))),
-        child: Center(
-          child: Container(
-            child: Text(state),
-          ),
+                topLeft: cst.AppRadius.backgroundRadius,
+                topRight: cst.AppRadius.backgroundRadius)),
+        child: Container(
+          child: this.state == 0 ? LoginContent() : BackContent(),
         ),
       ),
     );
